@@ -1,0 +1,148 @@
+<header>
+    <style>
+        /* Bordered form */
+form {
+  border: 3px solid #303030;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+body{
+  background-color: #303030;
+}
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+a:-webkit-any-link {
+    color: #1e90ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: #303030;
+}
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #6c757d;
+}
+b{
+  color: #6c757d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* The "Forgot password" text */
+span.psw {
+  color: #6c757d;
+  float: right;
+  padding-top: 16px;
+}
+.rmbr{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p{
+  color: red;
+  font-weight: bolder;
+  font-size: 150px;
+}
+@keyframes example {
+  10%   {color: red;}
+  20%  {color: purple;}
+  30%  {color: pink;}
+  40% {color: blue;}
+  50%   {color: cyan;}
+  60%  {color: rgb(58, 176, 58);}
+  70%  {color: orange;}
+  80% {color: rgb(255, 111, 0);}
+  90% {color: rgb(255, 0, 0);}
+  
+}
+
+/* The element to apply the animation to */
+p {
+  animation-iteration-count: infinite;
+  animation-name: example;
+  animation-duration: 70s;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+    </style>
+</header>
+<body>
+    <form action="index.html" method="post">
+        <div class="imgcontainer">
+           <p>Fashion.</p>
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input class = "rmbr" type="checkbox" checked="checked" name="remember"><a>Remember me</a> 
+          </label>
+        </div>
+      
+        <div class="container" style="background-color: #303030">
+         
+          <span class="psw">Forgot <a href="#">password?</a></span>
+          <button class = "havac" onclick="window.location.href='signup.html'"><a class = "havtxt">Don't have an account? Press here!</a></button>
+        </div>
+      </form>
+</body>

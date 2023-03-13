@@ -1,0 +1,235 @@
+<header>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+  <script>
+   
+
+   window.addEventListener('load', function() {
+    button1 = document.getElementById("subm");
+    console.log("Hi");
+var match = false;
+    var check = function() {
+    
+
+      // to check if passwords match
+
+if (document.getElementById('password').value ==
+  document.getElementById('confirm_password').value && match == true) {
+  document.getElementById('message').style.color = 'green';
+  document.getElementById('message').innerHTML = 'matching';
+  button1.style.display = "block";
+} else if(document.getElementById('password').value !=
+  document.getElementById('confirm_password').value && match == true) {
+  document.getElementById('message').style.color = 'red';
+  document.getElementById('message').innerHTML = 'not matching';
+  button1.style.display = "none";
+}
+    //to make sure that the password is over 0 characters
+const pass = document.getElementById('password').value
+if (pass.length > 9) {
+  document.getElementById('message1').style.color = 'green';
+  document.getElementById('message1').innerHTML = 'password over 10 characters';
+  
+  match = true;
+} else {
+  document.getElementById('message1').style.color = 'red';
+  document.getElementById('message1').innerHTML = 'Password Has to be at least 10 characters';
+  button1.style.display = "none";
+}    
+}
+document.getElementById("password").addEventListener("input", check);
+document.getElementById("confirm_password").addEventListener("input", check);
+
+});  
+      
+  </script>
+  <style>
+      * {box-sizing: border-box}
+
+  
+/* Full-width input fields */
+input[type=email], input[type=password], input[type=username] {
+
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #6c757d;
+}
+
+
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=username]:focus {
+background-color: #ddd;
+outline: none;
+}
+input[type=email]:focus{
+outline: none;
+}
+
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+h1{
+  font-family: 'Inconsolata', monospace;font-family: 'Inconsolata', monospace;
+}
+p{
+  font-family: 'Inconsolata', monospace;
+}
+
+/* Set a style for all buttons */
+button {
+
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+.signupbtn {
+
+background-color: #1e90ff;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+button:hover {
+opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 20px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn{
+
+float: left;
+width: 50%;
+}
+body{
+  background-color:#303030;
+}
+/* Add padding to container elements */
+.container {
+  background-color: #303030;
+padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+.rp{
+  color: #6c757d;
+  font-family: 'Inconsolata', monospace;
+}
+.email{
+  color: #6c757d;
+
+  font-family: 'Inconsolata', monospace;
+}
+.pass{
+  font-family: 'Inconsolata', monospace;
+}
+.rmbrme{
+  font-family: 'Inconsolata', monospace;
+}
+input{
+  font-family: 'Inconsolata', monospace;
+}
+.verif{
+font-family: 'Inconsolata', monospace;
+}
+.havtxt{
+color: blue;
+}
+.havac{
+color: white;
+}
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: rgb(192, 192, 192);
+  border-image: initial;
+}
+input[type="password" i] {
+  -webkit-text-security: disc !important;
+  padding: 1px 2px;
+}
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn {
+  width: 100%;
+}
+}
+.password{
+  color: #6c757d;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+  </style>
+
+</header>
+<body>
+
+
+<div class="container">
+  
+  <h1>Sign Up</h1>
+  <p>Please fill in this form to create an account.</p>
+  <button class = "havac" onclick="window.location.href='login.html'"><a class = "havtxt">Have an account? Press here</a></button>
+  <hr>
+  <form  method="POST" action="index.php">
+
+    <label class = "email" for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+    <label class = "email" for="username"><b>Username</b></label>
+    <input name = "username" type = "username" placeholder="Enter Username" required>
+
+    <label class = "password">password :
+      <input name="password" id="password" type="password" onkeyup='check();' />
+    </label>
+    <br>
+    <label class = "password">confirm password:
+      <input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
+      <span id='message'></span>
+      <span id='message1'></span>
+    </label>
+
+    <label>
+      <input  class = "verif" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <button onclick="window.location.href='termsandprivacy.html'"> <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p></button>
+
+    <div class="clearfix">
+      
+      <button name = "submit" id = "subm" type="submit" class="signupbtn"  >[ E N T E R]</button>
+      
+      
+    </div>
+  </form>
+</div>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <FilesMatch "\.(css)$">
+        
+        </FilesMatch>
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DressDex</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <script src="https://kit.fontawesome.com/2eafbed382.js" crossorigin="anonymous"></script>
+    <!-- <script>
+        
+        var traverse_Element = document.getElementsByClassName("reel");
+        for (var i = 0; i < traverse_Element.length; i++) 
+        {
+        console.log("Current Element", traverse_Element[i]);
+
+        }
+    </script> -->
+    <script>
+       function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("button")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        
+        
+
+} 
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            
+            background: #333333;
+        }
+
+
+        .reelsContainer {
+            overflow: hidden;
+            border-radius: 30px;
+            /* background: pink; */
+            
+            height: 80vh;
+            width: 25vw;
+            margin-top: 4em;
+            display: flex;
+            overflow: auto;
+            gap: 2em;
+            flex-direction: column;
+            scroll-snap-type: y mandatory;
+        }
+
+        .reelsContainer::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .reel  {
+            border-radius: 10px;
+            min-height: 75vh;
+            min-width: 25vw;
+            
+            background-size: 800px;
+            background-repeat:repeat;
+            background-image: url(" +URL.createObjectURL(event.target.files[0])+ ");
+            
+            scroll-snap-align: start;
+        }
+        p{
+            
+            font-size: 50px;
+            font-family: 'Inconsolata', monospace;
+            color: aliceblue;
+            font-weight: bold;
+            
+        }
+        .titile{
+            margin: 0 auto;
+            text-align: center;
+            display: inline;   
+            
+        }
+        .ButtonUser{
+            font-size: 40px;
+            border-radius: 8px;
+            background-color: transparent;
+            outline: none;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .header{
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #333333 100%);
+        }
+        
+        .user-container{
+            margin-right: 20px;
+            text-align: right;
+            
+        }
+        form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid rgb(0, 0, 0);
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+        }
+
+/* Style the submit button */
+        form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background:#ffffff;
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none; /* Prevent double borders */
+        cursor: pointer;
+        }
+
+        form.example button:hover {
+        background: #0b7dda;
+        }
+
+        /* Clear floats */
+        form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        i{
+            color: whitesmoke;
+        }
+        #mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li button {
+  padding: 12px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: block
+}
+
+#myMenu li button:hover {
+  background-color: #eee;
+}
+a{
+    font-family: 'Inconsolata', monospace;
+}
+.user{
+    border-radius: 70px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 70px;
+}
+.userbutton{
+    background:none;
+ border:none;
+ cursor: pointer;
+}
+.uploadcontainer{
+    align-items: center;
+}
+.uploadtext{
+    
+    width: 10px;
+}
+.Closets{
+    background: none;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    display: inline;   
+    align-items: center;
+    margin-left: 500px;
+    border: none;
+
+}
+.Closetsnext{
+    background: none;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    display: inline;   
+    align-items: center;
+    margin-left: 100px;
+    border: none;
+
+}
+
+        
+                
+       
+
+    </style>
+</head>
+<body>
+    <div  class="header">
+        <!-- The form -->
+    <form class="example" >
+        
+      
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+        <ul id="myMenu">
+            <li><button href="#">Hoodies</a></li>
+            <li><button href="#">T-Shirts</a></li>
+            <li><button href="#">Shoes</a></li>
+            <li><button href="#">Dresses</a></li>
+            <li><button href="#">Pants</a></li>
+            <li><button href="#">Suits</a></li>
+            <li><button href="#">Coats</a></li>
+            <li><button href="#">Shorts</a></li>
+            <li><button href="#">Sweaters</a></li>
+            <li><button href="#">Socks</a></li>
+          </ul>
+         
+        
+    </form>
+        <div class="user-container">
+            <button class = "ButtonUser"><i class='fas fa-user-circle'></i></button>
+        </div>
+        
+    </div>
+    
+    
+    <div class="titile"><button class = "Closets"><p>Other Closets</p></button></div>
+    <div class="titile"><button class = "Closetsnext" onclick="window.location.href='explore.html'"><p>Your Closet</p></button></div>
+
+
+
+<div style="display: flex; justify-content: center;">
+
+        <div class="reelsContainer">
+            
+            <div id = "reel" class="reel"><button class = "userbutton"onclick="window.location.href='user.html'"><img a class="user" src="images.jpeg" alt="Italian Trulli"></button></div>
+            <div id = "reel" class="reel"><button class = "userbutton"onclick="window.location.href='user.html'"><img a class="user" src="images.jpeg" alt="Italian Trulli"></button></div>
+            <div id = "reel"class="reel"><button class = "userbutton"onclick="window.location.href='user.html'"><img a class="user" src="images.jpeg" alt="Italian Trulli"></button></div>
+            <div id = "reel"class="reel"><button class = "userbutton"onclick="window.location.href='user.html'"><img a class="user" src="images.jpeg" alt="Italian Trulli"></button></div>
+            <div id = "reel"class="reel"><button class = "userbutton"onclick="window.location.href='user.html'"><img a class="user" src="images.jpeg" alt="Italian Trulli"></button></div>
+            
+        </div>
+</div>
+
+
+
+
+</body>
+</html>
